@@ -1,0 +1,130 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}
+
+body {
+  font-size: 16px;
+  font-family: 'Saira', sans-serif;
+}
+
+header, nav, main, footer {}
+
+header {margin-bottom: 10px;}
+header h1 {}
+header img {float: left;}
+header .subheading {}
+
+nav {}
+nav button {}
+
+nav ul {
+    display: none;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+    nav ul.show{
+        display: block;
+    }
+
+nav ul li {}
+nav ul li a {
+    display: block;
+    width: 100%;
+    background-color: #0cf;
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+}
+nav ul li.active{
+    background: #000;
+    background-color: black;
+}
+
+nav ul li.active a{
+    color: #fff;
+    background-color: black;
+}
+
+    nav ul li a:hover{
+        color: black;
+        background-color: aqua; 
+    }
+
+main {}
+main h2 {}
+
+main picture {
+    margin: 0 0 0 0; 
+    width:96%; 
+}
+
+main picture img 
+{ 
+    width: 100%; 
+}
+
+.valor {
+    font-weight: bold;
+}
+.current img{
+    max-width: 50px;
+}
+
+.forecast {
+    display: none;
+}
+
+article{
+    border-style: solid;
+    border-width: thin;
+    text-align: center;
+    margin-bottom: 15px;
+    overflow: auto;
+}
+
+
+article p.town-article img {
+  width: 96%;
+  margin: .35rem 2%;
+}
+
+footer {
+    text-align: center;
+}
+footer aside ul {list-style: none}
+footer>p {text-align: center} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+/* ------grid layout------- */
+@media (max-width: 600px) {.grid{
+        width: 300px;
+        display: grid; 
+        grid-template-columns: 300px;
+        }
+}
+@media (max-width: 1000px) {.grid{
+        width: 900px;
+        display: grid; 
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 200px 200px 200PX;
+  }
+        div figure img{ width: 400px;
+                height: 250px;}
+}
+
+.grid { margin: auto;
+        width: 900px;
+        display: grid; 
+        grid-template-columns: 300px;
+        grid-template-rows: 200px;
+        grid-gap: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        
+        }
+div figure img{ width: 200px;
+                height: 150px;
+                }
+div figcaption{ color: red; text-align: center;}
