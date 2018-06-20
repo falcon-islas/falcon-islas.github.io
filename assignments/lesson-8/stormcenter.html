@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> storm center page for Falcon weather</title>
+    <meta name="description" content="Weather Information for Franklin.">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=#" rel="stylesheet"> 
+    <link href="styles/main-5.css" rel="stylesheet">
+    <link href="styles/medium-5.css" rel="stylesheet">  
+    <link href="styles/large-5.css" rel="stylesheet">
+    <link href="styles/css.css" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <img src="images/wather-logo.jpg" alt="The Site Logo">
+    <h1>Falcon Nation Weather</h1>
+    <div class="subheading">The weather report</div>
+  </header>  
+
+  <nav>
+    <button onclick="toggleNavMenu()">☰</button>
+    <ul id="menu">
+    	<li><a href="#">Home</a></li>
+    	<li><a href="franklin-8.html">Franklin</a></li>
+    	<li><a href="#">Greenville</a></li>
+    	<li><a href="#">Springfield</a></li>
+    	<li><a href="stormcenter.html">Storm Center</a></li>
+    	<li><a href="gallery-8.html">Gallery</a></li>
+    </ul>		
+  </nav>
+    
+<main>
+    <h1>Storm Center Report Form</h1>
+        <form method="get" action="thanks.html">
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label class="top">Full Name * <input type="text" name="fname" placeholder="full name" pattern="[A-Za-z ]{5,}" required></label>
+            <label class="top">Email: <input type="email" name="email" placeholder="someone@gamil.com" ></label>
+            <label class="top">Phone Number * <input type="tel" name="phone" required></label>
+            <label class="top">Zipe Code * <input type="number" name="zipe" required> </label>
+        </fieldset>
+            
+        <fieldset>
+            <legend>Weather Informantion</legend>
+            <label class="top">Storm Date:<input type="date" name="stormdate"></label>
+            <label class="top">Storm Type:
+            <input list="storm">
+            <datalist id="storm">
+                <option value="Flash Flood">
+                <option value="Hail">
+                <option value="Hurricane">
+                <option value="Thunderstorm">
+                <option value="Tornado">
+            </datalist>
+            </label>
+            <label class="top">Storm Severity Rating (1 to 10):</label>
+            <input type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+		    <span id="ratingvalue">5</span>
+            <label class="top">storm Region
+                <select name="region">
+                <option value="select" selected="selected" disabled="disabled">Select Region &#9662;</option>
+                <option value="Franklin">Franklin</option>
+                <option value="Greenville">Greenville</option>
+                <option value="Springfield">Springfield</option>
+                </select>
+                </label>
+                <div>Are You in Danger?</div>
+                    <label class="sbs"><input type="radio" name="danger" value="yes">yes</label>
+                    <label class="sbs"><input type="radio" name="danger" value="maybe">maybe</label>
+                    <label class="sbs"><input type="radio" name="danger" value="no">no</label>
+            </fieldset>
+            
+         <fieldset>
+            <legend>Additional Informantion</legend>
+            <label class="top">Please add any additional information:</label>
+            <textarea name="comments" placeholder="Enter comments here..."></textarea>
+        </fieldset>
+    
+        <input value="Send Storm Report" class="submitbutton" type="submit">
+           
+        </form>
+</main>
+ <footer>
+    <aside>
+        <ul>
+            <li class="contact">123 Main st.</li>
+            <li class="contact"> Rancho cucamonga, USA</li>
+            <li class="contact">(xxx) xxx-xxxx</li>
+            <li class="contact">falconNation@weather.com</li>
+        </ul>    
+    </aside>
+    <p class="footer-bar">&copy;2018 All Rights Reserved |  Falcon Nation weather | <span id="currentdate"> </span></p>
+  </footer>
+    
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/rating.js"></script>
+</body>
+    
+</html>
